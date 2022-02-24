@@ -52,7 +52,7 @@ export const Signup = () => {
     console.log(response, "response");
     if (response) {
       alert('Successfullly Registerd to ICTAK Trainer Application ');
-
+      localStorage.setItem('email', email);
       navigate("/enroll", { replace: true });
 
 

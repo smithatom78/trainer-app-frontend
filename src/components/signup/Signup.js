@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import './Signup.css';
 import validation from './validation';
 export const Signup = () => {
@@ -8,7 +7,7 @@ export const Signup = () => {
 
 
   //manage form values
-  const [formValues, setFormvalues] = useState({ email: "", password: "", utype: "" });
+  const [formValues, setFormvalues] = useState({ email: "", password: "",utype:""});
   //manage errors
   const [formErrors, setFormErrors] = useState({})
   //flag for successuful submit
@@ -36,7 +35,7 @@ export const Signup = () => {
   }, [formErrors])
 
   async function registerUser() {
-    const utype = formValues.utype;
+    const utype = "trainer";
     const email = formValues.email;
     const password = formValues.password;
 
@@ -52,7 +51,7 @@ export const Signup = () => {
     console.log(response, "response");
     if (response) {
       alert('Successfullly Registerd to ICTAK Trainer Application ');
-      localStorage.setItem('email', email);
+      localStorage.setItem('email1', email);
       navigate("/enroll", { replace: true });
 
 
@@ -68,10 +67,13 @@ export const Signup = () => {
       {/*sign up*/}
       <div className="signup">
         <form onSubmit={handleSubmit}><br /><br />
-          <label className='heading1' aria-hidden="true">Trainer Sign up</label><br /><br /><br />
-          <label>User Type</label> &nbsp;&nbsp;
-          <input type="text" name="utype" placeholder="trainer" required="" value={formValues.utype} onChange={handleChange}/>
-          <br /><br />
+          <label className='heading1' aria-hidden="true">Trainer Sign up</label><br />
+         <label><br/><b>Step1: Enroll with a valid User Email and Password</b><br/>Your password will be secured as Jwt tokens.</label> &nbsp;&nbsp; <br /><br />
+         <label>user type</label> &nbsp;&nbsp; &nbsp;&nbsp;
+           <input type="text" name="utype" placeholder="Trainer" required="" value={formValues.utype} onChange={handleChange}/>
+      
+          <br />
+        <br />
           <p className='error'>{formErrors.username}</p><label>Email Id</label> &nbsp;&nbsp; &nbsp;&nbsp;
           <input type="email" name="email" placeholder="Email" required="" value={formValues.email} onChange={handleChange} />
           <p className='error'>{formErrors.email}</p> <br />

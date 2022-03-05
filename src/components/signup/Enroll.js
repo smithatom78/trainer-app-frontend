@@ -4,13 +4,13 @@ import './Enroll.css';
 export const Enroll = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('')
-    let _email = localStorage.getItem('email');
+    let cemail = localStorage.getItem('email1');
     useEffect(() => {
-     if(_email)
-setEmail(_email)
-    }, [_email])
-  console.log(_email);
-    const [enrollValues, setenrollValues] = useState({ name: "", address: "", approved: "false", company: "", courses: "", designation: "", email: _email, phone: "", qualification: "", skill: "", type: "trainer" });
+     if(cemail)
+setEmail(cemail)
+    }, [cemail])
+  console.log(cemail);
+    const [enrollValues, setenrollValues] = useState({ name: "", address: "", approved: "false", company: "", courses: "", designation: "", email: cemail, phone: "", qualification: "", skill: "", type: "trainer" });
 
     //function addTrainer() { }
     async function addTrainer(event) {
@@ -21,7 +21,7 @@ setEmail(_email)
         const company = enrollValues.company;
         const courses = enrollValues.courses;
         const designation = enrollValues.designation;
-        const email= _email;
+        const email= cemail;
         const phone = enrollValues.phone;
        //const photo = enrollValues.photo;
        const qualification = enrollValues.qualification;

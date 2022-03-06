@@ -18,3 +18,21 @@
 	height: 460px;
 	margin-left: 300;
 }
+.poster
+{height:550px;
+	width:850px;
+   
+}
+.column {
+    float: left;
+    width: 46%;
+height: 400px;
+padding:10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

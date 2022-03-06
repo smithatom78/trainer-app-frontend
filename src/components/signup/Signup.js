@@ -67,7 +67,7 @@ export const Signup = () => {
       {/*sign up*/}
       <div className="signup">
         <form onSubmit={handleSubmit}><br /><br />
-          <label className='heading1' aria-hidden="true">Trainer Sign up</label><br />
+          <h1>Trainer Sign up</h1><br />
          <label><br/><b>Step1: Enroll with a valid User Email and Password</b><br/>Your password will be secured as Jwt tokens.</label> &nbsp;&nbsp; <br /><br />
          <label>user type</label> &nbsp;&nbsp; &nbsp;&nbsp;
            <input type="text" name="utype" placeholder="Trainer" required="" value={formValues.utype} onChange={handleChange}/>

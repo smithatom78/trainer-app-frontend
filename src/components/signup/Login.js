@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import './Signup.css';
+import banner from './banner.png'
+import './Login.css';
 import validation from './validation1';
 export const Login = (props) => {
   const navigate = useNavigate();
@@ -56,27 +56,33 @@ export const Login = (props) => {
 
   }
   return (
-    <div class="main1">
+    <div>
+      <div class="row">
+ <div class="column"><img className='poster' src={banner} alt="ICTAK poster"/></div>
+   <div class="column">  
 
-      <div className='login' >
-        <form onSubmit={handleSubmit}><br /><br />
-          <h1>LOGIN</h1> &nbsp;&nbsp; <br /><br />
-          <label for="chk" aria-hidden="true">Email Id</label>&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="email" name="email" placeholder="Email" required="" value={formValues.email} onChange={handleChange} />
-          <p className='error'>{formErrors.email}</p>
-          <br /><label for="chk" aria-hidden="true">Password</label>&nbsp;&nbsp;
-          <input type="password" name="password" placeholder="Password" required="" value={formValues.password} onChange={handleChange} /> <p className='error'>{formErrors.password}</p> <br />
-          <label for="chk" aria-hidden="true">User Type</label>&nbsp;&nbsp;
-                  <select name="utype" required="" value={formValues.utype} onChange={handleChange}>
-                  <option value="-------------">Select Type Trainer/Admin  </option>
-            <option value="trainer">    Trainer    </option>
-            <option value="admin">Administrator</option>
-           </select>
-          <p className='error'>{formErrors.email}</p>
-          <br />
-          <button>Login</button>
-        </form>
-      </div>
-    </div>
+  <form onSubmit={handleSubmit}><br /><br />
+    <h1>LOGIN</h1> &nbsp;&nbsp; <br /><br />
+    <label for="chk" aria-hidden="true">Email Id</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="email" name="email" placeholder="Email" required="" value={formValues.email} onChange={handleChange} />
+    <p className='error'>{formErrors.email}</p>
+    <br /><label for="chk" aria-hidden="true">Password</label>&nbsp;&nbsp;
+    <input type="password" name="password" placeholder="Password" required="" value={formValues.password} onChange={handleChange} /> <p className='error'>{formErrors.password}</p> <br />
+    <label for="chk" aria-hidden="true">User Type</label>&nbsp;&nbsp;
+            <select name="utype" required="" value={formValues.utype} onChange={handleChange}>
+            <option value="-------------">Select Type Trainer/Admin  </option>
+      <option value="trainer">    Trainer    </option>
+      <option value="admin">Administrator</option>
+     </select>
+    <p className='error'>{formErrors.email}</p>
+    <br />
+    <button>Login</button>
+  </form>
+</div>
+</div></div>
+  
+
+
+   
   )
 }

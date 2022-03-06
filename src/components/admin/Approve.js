@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Approve = () => {
   return (
-    <div> <br/>    Approve <br/>     <br/>    </div>
+    <div> <br/> <h1>Approve  the Trainer</h1>   <br/>     <br/>    </div>
   )
 }

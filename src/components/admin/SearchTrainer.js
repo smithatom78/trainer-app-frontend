@@ -2,6 +2,6 @@ import React from 'react'
 
 export const SearchTrainer = () => {
   return (
-    <div> <br/>    SearchTrainer  <br/>     <br/>    </div>
+    <div> <br/>   <h1>Search Trainer  </h1> <br/>     <br/>    </div>
   )
 }

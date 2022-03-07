@@ -39,7 +39,7 @@ console.log(_email);
 }
  const atable = {
  width: 500,
-    height: 400,
+    height: 500,
     display: 'flex',
     alignItems: 'left',
     justifyContent: 'left',

@@ -85,6 +85,16 @@ console.log(_email);
               <TableCell>Skillset</TableCell>
               <TableCell align="right">{trainer.skill}</TableCell>
               </TableRow>
+              <TableRow>
+              <TableCell>Approval status</TableCell>
+              <TableCell align="right">{trainer.approved?
+              <>True</>
+              :
+              <>False</>
+              
+              }
+              </TableCell>
+              </TableRow>
               <TableRow className='buttona'>
               <TableCell>Trainer Type</TableCell>
               <TableCell align="right"> {trainer.type}</TableCell>
